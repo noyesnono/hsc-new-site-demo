@@ -1,0 +1,740 @@
+@media (min-width:768px) {
+    .news-input{
+        width: 50%;
+    }
+}
+
+/* 由于导航栏始终置顶，body的顶部需要一个空的block，使整体下移 */
+
+body::before{
+    display: block;
+    content: "";
+    height: 45px;    
+}
+
+/* body{
+    background: linear-gradient(200deg,#f5f7fa,#c3cfe2);
+} */
+
+/* 背景渐变 */
+/*
+body
+{
+    background: linear-gradient(180deg,#800016,#00043a);
+}
+*/
+
+/* 文字滚动 */
+#box
+{
+    width: 400px;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+#box .text {
+    display: inline-block;
+    min-width: 100%;
+    white-space: nowrap;
+    font-size: 24px;
+    text-align: center;
+    animation: moving 15s infinite;
+    animation-direction: alternate;
+
+}
+@keyframes moving {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(400px - 100%));
+
+    }
+}
+
+/* 要闻动态的卡片效果 */
+.container0{} 
+.container0 .card0{
+    background: #fedfd4;
+    box-shadow: -6px -6px 20px #ffffff,
+                6px 6px 10px #fedfd4;
+}
+.container0 .card0:hover{
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5),
+                inset 6px 6px 10px rgba(0, 0, 0, 0.05);
+}
+.container0 .card0:hover .contentBx{
+    transform: scale(0.98);
+}
+.container0 .card0 .contentBx a:hover span{
+    display: block;
+    transform: scale(0.98);
+}
+
+
+
+
+/* 科学、科学家、科学城左侧栏 */
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* 科学-------------------------------------------------------------------------------------------------------------------*/
+/* ::selection{
+  background: #004e89;
+  color: #fff;
+} */
+.container1{
+    width: 100%;
+    /* padding: 20px 20px 20px 20px; */
+    background: #fff;
+    border-radius: 12px;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+}
+.container1 .topic{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content .list{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%; */
+    /* margin-right: 10px; */
+    position: relative;
+}
+.content .list label{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 0px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+
+#platformxxx:checked ~ .list label.platformxxx,
+#appointment:checked ~ .list label.appointment,
+#communication:checked ~ .list label.communication,
+#achievement:checked ~ .list label.achievement{
+    color: #fff;
+}
+
+.content .list label:hover{
+    color: #407ba7;
+}
+.content .slider1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: #407ba7;
+    transition: all 0.4s ease;
+}
+
+#platformxxx:checked ~ .list .slider1{
+    top: 0;
+}
+#appointment:checked ~ .list .slider1{
+    top: 60px;
+}
+#communication:checked ~ .list .slider1{
+    top: 120px;
+}
+#achievement:checked ~ .list .slider1{
+    top: 180px;
+}
+.content .text-content{
+    width: 60%;
+    height: 100%;
+}
+.content .text{
+    display: none;
+}
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.content .text p{
+    text-align: justify;
+}
+
+/* .content .text-content .scientist{
+  display: block;
+} */
+#platformxxx:checked ~ .text-content .platformxxx,
+#appointment:checked ~ .text-content .appointment,
+#communication:checked ~ .text-content .communication,
+#achievement:checked ~ .text-content .achievement{
+    display: block;
+}
+#appointment:checked ~ .text-content .platformxxx,
+#communication:checked ~ .text-content .platformxxx,
+#achievement:checked ~ .text-content .platformxxx{
+    display: none;
+}
+.content input{
+    display: none;
+}
+
+.container1{
+    width: 100%;
+    padding: 40px 40px  40px  40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container1 .topic{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content .list{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%; */
+    /* margin-right: 10px; */
+    position: relative;
+}
+.content .list label{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 0px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+  
+#platformxxx:checked ~ .list label.platformxxx,
+#appointment:checked ~ .list label.appointment,
+#communication:checked ~ .list label.communication,
+#achievement:checked ~ .list label.achievement{
+    color: #fff;
+}
+  
+.content .list label:hover{
+    color: #407ba7;
+}
+.content .slider1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: #407ba7;
+    transition: all 0.4s ease;
+}
+  
+#platformxxx:checked ~ .list .slider1{
+    top: 0;
+}
+#appointment:checked ~ .list .slider1{
+    top: 60px;
+}
+#communication:checked ~ .list .slider1{
+    top: 120px;
+}
+#achievement:checked ~ .list .slider1{
+    top: 180px;
+}
+.content .text-content{
+    width: 60%;
+    height: 100%;
+}
+.content .text{
+    display: none;
+}
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+  
+.content .text p{
+    text-align: justify;
+}
+  
+/* .content .text-content .platformxxx{
+    display: block;
+} */
+#platformxxx:checked ~ .text-content .platformxxx,
+#appointment:checked ~ .text-content .appointment,
+#communication:checked ~ .text-content .communication,
+#achievement:checked ~ .text-content .achievement{
+    display: block;
+}
+#appointment:checked ~ .text-content .platformxxx,
+#communication:checked ~ .text-content .platformxxx,
+#achievement:checked ~ .text-content .platformxxx{
+    display: none;
+}
+.content input{
+    display: none;
+}
+
+
+/* 科学家-------------------------------------------------------------------------------------------------------------------*/
+/* ::selection{
+  background: #004e89;
+  color: #fff;
+} */
+.container2{
+    width: 100%;
+    padding: 40px 40px  40px  40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container2 .topic{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content .list{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%; */
+    /* margin-right: 10px; */
+    position: relative;
+}
+.content .list label{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 0px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+
+#scientist:checked ~ .list label.scientist,
+#young:checked ~ .list label.young,
+#organization:checked ~ .list label.organization,
+#story:checked ~ .list label.story,
+#recruit:checked ~ .list label.recruit{
+    color: #fff;
+}
+
+.content .list label:hover{
+    color: #004e89;
+}
+.content .slider2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: #004e89;
+    transition: all 0.4s ease;
+}
+
+#scientist:checked ~ .list .slider2{
+    top: 0;
+}
+#young:checked ~ .list .slider2{
+    top: 60px;
+}
+#organization:checked ~ .list .slider2{
+    top: 120px;
+}
+#story:checked ~ .list .slider2{
+    top: 180px;
+}
+#recruit:checked ~ .list .slider2{
+    top: 240px;
+}
+.content .text-content{
+    width: 60%;
+    height: 100%;
+}
+.content .text{
+    display: none;
+}
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.content .text p{
+    text-align: justify;
+}
+
+/* .content .text-content .scientist{
+  display: block;
+} */
+#scientist:checked ~ .text-content .scientist,
+#young:checked ~ .text-content .young,
+#organization:checked ~ .text-content .organization,
+#story:checked ~ .text-content .story,
+#recruit:checked ~ .text-content .recruit{
+    display: block;
+}
+#young:checked ~ .text-content .scientist,
+#organization:checked ~ .text-content .scientist,
+#story:checked ~ .text-content .scientist,
+#recruit:checked ~ .text-content .scientist{
+    display: none;
+}
+.content input{
+    display: none;
+}
+
+.container2{
+    width: 100%;
+    padding: 40px 40px  40px  40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container2 .topic{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content .list{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%; */
+    /* margin-right: 10px; */
+    position: relative;
+}
+.content .list label{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 0px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+  
+#scientist:checked ~ .list label.scientist,
+#young:checked ~ .list label.young,
+#organization:checked ~ .list label.organization,
+#story:checked ~ .list label.story,
+#recruit:checked ~ .list label.recruit{
+    color: #fff;
+}
+  
+.content .list label:hover{
+    color: #004e89;
+}
+.content .slider2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: #004e89;
+    transition: all 0.4s ease;
+}
+  
+#scientist:checked ~ .list .slider2{
+    top: 0;
+}
+#young:checked ~ .list .slider2{
+    top: 60px;
+}
+#organization:checked ~ .list .slider2{
+    top: 120px;
+}
+#story:checked ~ .list .slider2{
+    top: 180px;
+}
+#recruit:checked ~ .list .slider2{
+    top: 240px;
+}
+.content .text-content{
+    width: 60%;
+    height: 100%;
+}
+.content .text{
+    display: none;
+}
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+  
+.content .text p{
+    text-align: justify;
+}
+  
+/* .content .text-content .scientist{
+    display: block;
+} */
+#scientist:checked ~ .text-content .scientist,
+#young:checked ~ .text-content .young,
+#organization:checked ~ .text-content .organization,
+#story:checked ~ .text-content .story,
+#recruit:checked ~ .text-content .recruit{
+    display: block;
+}
+#young:checked ~ .text-content .scientist,
+#organization:checked ~ .text-content .scientist,
+#story:checked ~ .text-content .scientist,
+#recruit:checked ~ .text-content .scientist{
+    display: none;
+}
+.content input{
+    display: none;
+}
+
+
+/* 科学城-------------------------------------------------------------------------------------------------------------------*/
+/* ::selection{
+  background: #004e89;
+  color: #fff;
+} */
+.container3{
+    width: 100%;
+    padding: 40px 40px  40px  40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container3 .topic{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content .list{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%; */
+    /* margin-right: 10px; */
+    position: relative;
+}
+.content .list label{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 0px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+
+#progressxxx:checked ~ .list label.progressxxx,
+#infrastructure:checked ~ .list label.infrastructure,
+#service:checked ~ .list label.service,
+#travel:checked ~ .list label.travel{
+    color: #fff;
+}
+
+.content .list label:hover{
+    color: #002962;
+}
+.content .slider3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: #002962;
+    transition: all 0.4s ease;
+}
+
+#progressxxx:checked ~ .list .slider3{
+    top: 0;
+}
+#infrastructure:checked ~ .list .slider3{
+    top: 60px;
+}
+#service:checked ~ .list .slider3{
+    top: 120px;
+}
+#travel:checked ~ .list .slider3{
+    top: 180px;
+}
+.content .text-content{
+    width: 60%;
+    height: 100%;
+}
+.content .text{
+    display: none;
+}
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.content .text p{
+    text-align: justify;
+}
+
+/* .content .text-content .scientist{
+  display: block;
+} */
+#progressxxx:checked ~ .text-content .progressxxx,
+#infrastructure:checked ~ .text-content .infrastructure,
+#service:checked ~ .text-content .service,
+#travel:checked ~ .text-content .travel{
+    display: block;
+}
+#infrastructure:checked ~ .text-content .progressxxx,
+#service:checked ~ .text-content .progressxxx,
+#travel:checked ~ .text-content .progressxxx{
+    display: none;
+}
+.content input{
+    display: none;
+}
+
+.container3{
+    width: 100%;
+    padding: 40px 40px  40px  40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container3 .topic{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content .list{
+    display: flex;
+    flex-direction: column;
+    /* width: 20%; */
+    /* margin-right: 10px; */
+    position: relative;
+}
+.content .list label{
+    height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 0px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+  
+#progressxxx:checked ~ .list label.progressxxx,
+#infrastructure:checked ~ .list label.infrastructure,
+#service:checked ~ .list label.service,
+#travel:checked ~ .list label.travel{
+    color: #fff;
+}
+  
+.content .list label:hover{
+    color: #002962;
+}
+.content .slider3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background: #002962;
+    transition: all 0.4s ease;
+}
+  
+#progressxxx:checked ~ .list .slider3{
+    top: 0;
+}
+#infrastructure:checked ~ .list .slider3{
+    top: 60px;
+}
+#service:checked ~ .list .slider3{
+    top: 120px;
+}
+#travel:checked ~ .list .slider3{
+    top: 180px;
+}
+.content .text-content{
+    width: 60%;
+    height: 100%;
+}
+.content .text{
+    display: none;
+}
+.content .text .title{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+  
+.content .text p{
+    text-align: justify;
+}
+  
+/* .content .text-content .progressxxx{
+    display: block;
+} */
+#progressxxx:checked ~ .text-content .progressxxx,
+#infrastructure:checked ~ .text-content .infrastructure,
+#service:checked ~ .text-content .service,
+#travel:checked ~ .text-content .travel{
+    display: block;
+}
+#infrastructure:checked ~ .text-content .progressxxx,
+#service:checked ~ .text-content .progressxxx,
+#travel:checked ~ .text-content .progressxxx{
+    display: none;
+}
+.content input{
+    display: none;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+/* body{
+    background: linear-gradient(200deg,#f5f7fa,#c3cfe2);
+} */
+.containerxxx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 允许换行 */
+    flex-wrap: wrap;
+}
+.cardxxx{
+    position: relative;
+    width: 240px;
+    height: 350px;
+    margin: 10px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #f5f5f5;
+    /* 阴影 */
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1),
+    0 2px 2px rgba(0,0,0,0.1),
+    0 4px 4px rgba(0,0,0,0.1),
+    0 8px 8px rgba(0,0,0,0.1),
+    0 16px 16px rgba(0,0,0,0.1);
+    /* 溢出隐藏 */
+    overflow: hidden;
+}
+.cardxxx::before{
+    content: "";
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-image: url(/images/139/1.jpg); */
+    background-size: cover;
+    background-position: 0 0;
+    /* 过渡效果: css属性名 时长 贝塞尔曲线 */
+    transition: transform 1s cubic-bezier(0.19,1,0.22,1);
+}
+/* 分别设置图片 */
+.cardxxx:nth-child(1)::before{
+    background-image: url(./img/001.jpg);
+}
+.cardxxx:nth-child(2)::before{
+    background-image: url(./img/002.jpg);
+}
+.cardxxx:nth-child(3)::before{
+    background-image: url(./img/003.jpg);
+}
+.cardxxx:nth-child(4)::before{
+    background-image: url(./img/004.jpg);
+}
+.cardxxx:nth-child(5)::before{
+    background-image: url(./img/005.jpg);
+}
+.cardxxx:nth-child(6)::before{
+    background-image: url(./img/006.jpg);
+}
+.cardxxx:nth-child(7)::before{
+    background-image: url(./img/007.jpg);
+}
+.cardxxx:nth-child(8)::before{
+    background-image: url(./img/008.jpg);
+}
+/* 遮罩 */
+.cardxxx::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.25) 55%,
+    rgba(0,0,0,0.8) 100%);
+    /* 绝对定位 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+    /* 过渡效果 */
+    transition: transform 1.4s cubic-bezier(0.19,1,0.22,1);
+}
+.cardxxx .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 16px 8px;
+    transform: translateY(76%);
+    transition: transform 0.7s cubic-bezier(0.19,1,0.22,1);
+}
+.cardxxx h2{
+    font-size: 23px;
+    font-weight: bold;
+}
+.cardxxx p{
+    font-size: 15px;
+    /* 字间距 */
+    letter-spacing: 2px;
+    width: 80%;
+    line-height: 30px;
+    margin-top: 25px;
+    /* 文本两端对齐 */
+    text-align: justify;
+}
+.cardxxx button{
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+.cardxxx button:hover{
+    background-color: #000;
+}
+.cardxxx .content *:not(h2){
+    /* .content下，除了h2，其他元素隐藏并下移20px */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.7s cubic-bezier(0.19,1,0.22,1),opacity 0.7s cubic-bezier(0.19,1,0.22,1);
+}
+.cardxxx:hover{
+    align-items: center;
+}
+.cardxxx:hover::before{
+    transform: translateY(-5%);
+}
+.cardxxx:hover::after{
+    transform: translateY(-50%);
+}
+.cardxxx:hover .content{
+    transform: translateY(0);
+}
+.cardxxx:hover .content *:not(h2){
+    opacity: 1;
+    transform: translateY(0);
+    /* 过渡效果延迟 */
+    transition-delay: 0.1s;
+}

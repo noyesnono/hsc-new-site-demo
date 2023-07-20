@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怀柔科学城官网Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- 引入字体图标 -->
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+</head>
+
+<body style="background: linear-gradient(200deg,#f5f7fa,#c3cfe2);">
+
+    <!--导航栏-->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #800016;">
+        <div class="container">
+
+            <!--brand-->
+            <a class="navbar-brand text-light mb-2 mb-lg-0" href="./index.html">
+                <img src="./img/logo_white.svg" alt="logo" width="40" height="25" class="d-inline-block align-text-center mb-1">
+                <span style="font-weight:bold;font-size:25px;">怀柔科学城</span>                   
+            </a>
+
+            <!--折叠按钮-->
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!--搜索框-->
+                <form class="d-flex mx-auto mb-2 mb-lg-0 order-lg-2" role="search">
+                    <input class="form-control" type="search" placeholder="搜索" aria-label="Search" style="height:38px; width: 200px;">
+                    <button class="btn btn-light" type="submit">
+                            <img src="./img/search.svg" alt="search" style="height:18px; width: 18px;" >
+                    </button>              
+                </form>
+
+                <!--要闻动态……-->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 order-lg-1">
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            要闻动态
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./news.html">最新动态</a></li>
+                            <li><a class="dropdown-item" href="#">通知公告</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            政务公开
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">领导信息</a></li>
+                            <li><a class="dropdown-item" href="#">机构职能</a></li>
+                            <li><a class="dropdown-item" href="#">政策文件</a></li>
+                            <li><a class="dropdown-item" href="#">规划文件</a></li>
+                            <li><a class="dropdown-item" href="#">信息公开</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item text-truncate" >
+                        <a class="nav-link  text-light" href="./q&a.html">政民互动</a>
+                    </li>
+                </ul>
+    
+                <!--科学、科学家、科学城-->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 order-lg-3">
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            科学
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./infrastructure.html">设施平台</a></li>
+                            <li><a class="dropdown-item" href="./infrastructure.html">设施预约</a></li>
+                            <li><a class="dropdown-item" href="#">合作交流</a></li>
+                            <li><a class="dropdown-item" href="#">科研成果</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            科学家
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./scientist.html">领军人物</a></li>
+                            <li><a class="dropdown-item" href="#">青年科学家</a></li>
+                            <li><a class="dropdown-item" href="#">科学组织</a></li>
+                            <li><a class="dropdown-item" href="#">人物故事</a></li>
+                            <li><a class="dropdown-item" href="#">人才招聘</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            科学城
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./process.html">建设进展</a></li>
+                            <li><a class="dropdown-item" href="#">配套设施</a></li>
+                            <li><a class="dropdown-item" href="#">企业服务</a></li>
+                            <li><a class="dropdown-item" href="#">云游科学城</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!--登录、语言、无障碍-->
+                <div class="mb-2 mb-lg-0 mx-e order-4 d-flex" role="translate">
+                    <button class="btn btn-sm btn-outline-secondary me-3 bg-light text-dark text-truncate" type="button" onclick="window.location.href = './login.html' ">登录</button>
+
+                    <button class="btn btn-sm btn-outline-secondary me-3 me-lg-1 bg-primary bg-gradient text-light" type="button">繁</button>
+                    <button class="btn btn-sm btn-outline-secondary me-3 me-lg-1 bg-primary bg-gradient text-light" type="button">En</button>
+                    <button class="btn btn-sm btn-outline-secondary me-3 me-lg-1 bg-primary bg-gradient text-light" type="button"><img src="./img/handicapped.svg" alt="..." style="width:15px;height:20px;"></button>                    
+                </div> 
+                                             
+            </div>
+        </div>
+    </nav>
+
+
+    <!--图片轮播-->
+    <section class="p-3">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="./img/carousel01.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-light">
+                        <h1 class="bg-opacity-75 col-lg-8 mx-auto fw-bold bg-dark" style="background-color: #800016;">百年科学城，奋斗每一天！</h1>
+                        <p class="bg-opacity-75 col-lg-8 mx-auto bg-dark" style="background-color: #800016;">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./img/carousel02.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-light">
+                            <h1 class="bg-opacity-75 col-lg-8 mx-auto fw-bold bg-dark" style="background-color: #800016;">科学家</h1>
+                            <p class="bg-opacity-75 col-lg-8 mx-auto bg-dark" style="background-color: #800016;">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./img/carousel03.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-light">
+                            <h1 class="bg-opacity-75 col-lg-8 mx-auto fw-bold bg-dark" style="background-color: #800016;">科学城</h1>
+                            <p class="bg-opacity-75 col-lg-8 mx-auto bg-dark" style="background-color: #800016;">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./img/carousel04.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-light">
+                            <h1 class="bg-opacity-75 col-lg-8 mx-auto fw-bold bg-dark" style="background-color: #800016;">院所动态</h1>
+                            <p class="bg-opacity-75 col-lg-8 mx-auto bg-dark" style="background-color: #800016;">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 要闻动态+政务公开 -->
+    <section class="p-3">
+        <div class="container container0">
+            <div class="card text-start border-0">
+                <div class="card-header border-0">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                        <a class="nav-link active fw-bold fs-4" aria-current="true" href="#" style="color: #800016;">要闻动态</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold fs-4" href="#">政务公开</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-2 row-cols-lg-4 g-4">
+                        <div class="col">
+                            <div class="card h-100 card0 border-0">
+                                <img src="./img/news1.jpg" class="card-img-top imgBx" alt="...">
+                                <div class="card-body contentBx">
+                                    <p class="card-text text-dark">北京市与科技部国家发改委中科院联合到怀柔科学城调研并召开座谈</p>
+                                </div>
+        
+                                <button type="button" class="btn border-0 position-absolute bottom-0 end-0">
+                                    <img src="./img/arrow-right-square-fill2.svg" alt="arrow" width="30" height="30">
+                                </button>
+                                                      
+                                <div class="card-footer">
+                                    <small class="text-muted">2022年7月16日</small>
+                                </div>                      
+                            </div>
+                        </div>
+        
+                        <div class="col">
+                            <div class="card h-100 card0 border-0">
+                                <img src="./img/news2.jpg" class="card-img-top imgBx" alt="...">
+                                <div class="card-body contentBx">
+                                    <p class="card-text text-dark">郭延红到北京工业大学调研座谈，北京工业大学与怀柔区人民政府签订战略合作协议</p>
+                                </div>
+
+                                <a href="./news.html"><button type="button" class="btn border-0 position-absolute bottom-0 end-0">
+                                    <img src="./img/arrow-right-square-fill2.svg" alt="arrow" width="30" height="30">
+                                </button></a>
+        
+                                
+                                                      
+                                <div class="card-footer">
+                                    <small class="text-muted">2022年7月29日</small>
+                                </div>                      
+                            </div>
+                        </div>
+        
+                        <div class="col">
+                            <div class="card h-100 card0 border-0">
+                                <img src="./img/news3.jpg" class="card-img-top imgBx" alt="...">
+                                <div class="card-body contentBx">
+                                    <p class="card-text text-dark">蔡奇王志刚侯建国陈吉宁调研怀柔科学城</p>
+                                </div>
+        
+                                <button type="button" class="btn border-0 position-absolute bottom-0 end-0">
+                                    <img src="./img/arrow-right-square-fill2.svg" alt="arrow" width="30" height="30">
+                                </button>
+                                                      
+                                <div class="card-footer">
+                                    <small class="text-muted">2022年7月16日</small>
+                                </div>                      
+                            </div>
+                        </div>
+        
+                        <div class="col">
+                            <div class="card h-100 card0 border-0">
+                                <img src="./img/news4.jpg" class="card-img-top imgBx" alt="...">
+                                <div class="card-body contentBx">
+                                    <p class="card-text text-dark">怀柔区委、怀柔科学城党工委理论学习中心组举行学习（扩大）会暨干部学科技讲座</p>
+                                </div>
+        
+                                <button type="button" class="btn border-0 position-absolute bottom-0 end-0">
+                                    <img src="./img/arrow-right-square-fill2.svg" alt="arrow" width="30" height="30">
+                                </button>
+                                                      
+                                <div class="card-footer">
+                                    <small class="text-muted">2022年7月16日</small>
+                                </div>                      
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+    </section>    
+
+
+
+    <!--科学、科学家、科学城-->
+    
+    <section class="p-0">
+
+
+
+        <!-- 科学------------------------------------------------------>
+        <div class="container">
+            <div class="container container1 mb-4">
+                <div class="topic text-center">科学</div>
+    
+                <div class="content d-flex my-start">
+                    <input type="radio" name="slider1" checked id="platformxxx">
+                    <input type="radio" name="slider1" id="appointment">
+                    <input type="radio" name="slider1" id="communication">
+                    <input type="radio" name="slider1" id="achievement">
+    
+                    <div class="list col-2 text-truncate text-center">
+                        <label for="platformxxx" class="platformxxx">
+                            <i class="fa fa-university" aria-hidden="true"></i>
+                            <span class="title">设施平台</span>
+                        </label>
+                        <label for="appointment" class="appointment">
+                            <span class="icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
+                            <span class="title">设施预约</span>
+                        </label>
+                        <label for="communication" class="communication">
+                            <span class="icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+                            <span class="title">合作交流</span>
+                        </label>
+                        <label for="achievement" class="achievement">
+                            <span class="icon"><i class="fa fa-microchip" aria-hidden="true"></i></span>
+                            <span class="title">科研成果</span>
+                        </label>
+                        
+                        <div class="slider1"></div>
+    
+                    </div>
+    
+                    <div class="text-content col-10 d-flex mx-end">
+                        <div class="platformxxx text">
+                        <div class="title">设施平台</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore similique, iusto nulla error itaque maxime nesciunt sed quisquam unde quo iure? Eveniet doloribus cupiditate minus cumque dolorem, quae perspiciatis ad iure, repellendus nobis ut quia temporibus ratione velit suscipit tempore.</p>
+                            <p class="text-end">
+                                <a href="./infrastructure.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+    
+                        <div class="appointment text">
+                        <div class="title">设施预约</div>
+                            <p>设施预约系统是用于提供给相关科研人员及科研实验室，帮助管理大科学设施平台更好地管理仪器，并根据设备特点设计及对接了信用管理、科研管理和财务管理等系统，极大地提高了科技资源使用率和工作效率。</p>
+                            <p class="text-end">
+                                <a href="./infrastructure.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="communication text">
+                        <div class="title">合作交流</div>
+                            <p>怀柔科学城不断深化国际交流合作，积极参与全球科技治理。集聚国际知名科学家和团队资源，推动国家科学中心国际合作联盟成立，国际综合性科学中心研讨会、亚欧科技创新合作论坛、全球创新经济论坛等国际高水平学术会议举办，努力打造具有国际影响力和国际资源吸附力的创新综合体。</p>
+                            <p class="text-end">
+                                <a href="./infrastructure.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="achievement text">
+                        <div class="title">科研成果</div>
+                            <p>引领性原创成果实现突破。怀柔科学城坚持边建设、边运行、边科研、边产出，中科院持续加大在怀科研投入，累计产出重大科研成果51项。</p>
+                            <p class="text-end">
+                                <a href="./infrastructure.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        
+
+
+
+
+
+        <!-- 科学家------------------------------------------------------>
+        <div class="container">
+            <div class="container container2 mb-4">
+                <div class="topic text-center">科学家</div>
+    
+                <div class="content d-flex my-start">
+                    <input type="radio" name="slider2" checked id="scientist">
+                    <input type="radio" name="slider2" id="young">
+                    <input type="radio" name="slider2" id="organization">
+                    <input type="radio" name="slider2" id="story">
+                    <input type="radio" name="slider2" id="recruit">
+    
+                    <div class="list col-2 text-truncate text-center">
+                        <label for="scientist" class="scientist">
+                            <i class="fa fa-user-md" aria-hidden="true"></i>
+                            <span class="title">领军人物</span>
+                        </label>
+                        <label for="young" class="young">
+                            <span class="icon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                            <span class="title">青年科学家</span>
+                        </label>
+                        <label for="organization" class="organization">
+                            <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                            <span class="title">科学组织</span>
+                        </label>
+                        <label for="story" class="story">
+                            <span class="icon"><i class="fa fa-bullhorn" aria-hidden="true"></i></span>
+                            <span class="title">人物故事</span>
+                        </label>
+                        <label for="recruit" class="recruit">
+                            <span class="icon"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                            <span class="title">人才招聘</span>
+                        </label>
+                        
+                        <div class="slider2"></div>
+    
+                    </div>
+    
+                    <div class="text-content col-10 d-flex mx-end">
+                        <div class="scientist text">
+                        <div class="title">领军人物</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi excepturi ducimus sequi dignissimos expedita tempore omnis quos cum, possimus, aspernatur esse nihil commodi est maiores dolorum rem iusto atque, beatae voluptas sit eligendi architecto dolorem temporibus. Non magnam ipsam, voluptas quasi nam dicta ut. Ad corrupti aliquid obcaecati al</p>
+                            <p class="text-end">
+                                <a href="./scientist.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+    
+                        <div class="young text">
+                        <div class="title">青年科学家</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tempora, unde reprehenderit incidunt excepturi blanditiis ullam dignissimos provident quam? Fugit, enim! Architecto ad officiis dignissimos ex quae iusto amet pariatur, ea eius aut velit, tempora magnam hic autem maiores unde corrupti tenetur delectus! Voluptatum praesentium labore consectetur ea qui illum illo distinctio, sunt, ipsam rerum optio quibusdam cum a? Aut facilis non fuga molestiae </p>
+                            <p class="text-end">
+                                <a href="./scientist.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="organization text">
+                        <div class="title">科学组织</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores error neque, officia excepturi dolores quis dolor, architecto iusto deleniti a soluta nostrum. Fuga reiciendis beatae, dicta voluptaciis asperiores saepe quo soluta laudantium ad non quisquam! Repellendus culpa necessitatibus aliquam quod mollitia perspiciatis ducimus doloribus perferendis autem, omnis, impedit, veniam qui dolorem? Ipsam nihil assumenda, sit ratione blanditiis eius aliquam libero iusto, dolorum aut perferendis modi laboriosam sint dolor.</p>
+                            <p class="text-end">
+                                <a href="./scientist.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="story text">
+                        <div class="title">人物故事</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore magnam vitae inventore blanditiis nam tenetur voluptates doloribus error atque reprehenderit, necessitatibus minima incidunt a eius corruro consequuntur quisquam et assumenda distinctio dignissimos doloremque enim nemo delectus deserunt! Ullam perspiciatis quae aliquid animi quam amet deleniti, at dolorum tenetur, tempore laborum.</p>
+                            <p class="text-end">
+                                <a href="./scientist.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="recruit text">
+                        <div class="title">人才招聘</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus incidunt possimus quas ad, sit nam veniam illo ullam sapiente, aspernatur fugiat atque. Laboriosam libero voluptatum molestiae veniam earum quisquam, laudantium aperiam, eligendi dicta animi maxime sunt non nisi, ex, ipsa! Soluta ex, quibusdam voluptatem distinctio asperiores recusandae veritatis optio dolorem illo nesciunt quos ullam, dicta numquam ipsam cumque sed. Blanditiis omnis placeat, enim sit dicta elor debitis molestiae et sapiente neque tempore natus?</p>
+                            <p class="text-end">
+                                <a href="./scientist.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+
+
+        <!---科学城------------------------------------------------------>
+        <div class="container">
+            <div class="container container3">
+                <div class="topic text-center">科学城</div>
+    
+                <div class="content d-flex my-start">
+                    <input type="radio" name="slider3" checked id="progressxxx">
+                    <input type="radio" name="slider3" id="infrastructure">
+                    <input type="radio" name="slider3" id="service">
+                    <input type="radio" name="slider3" id="travel">
+    
+                    <div class="list col-2 text-truncate text-center">
+                        <label for="progressxxx" class="progressxxx">
+                            <i class="fa fa-building-o" aria-hidden="true"></i>
+                            <span class="title">建设进展</span>
+                        </label>
+                        <label for="infrastructure" class="infrastructure">
+                            <span class="icon"><i class="fa fa-building" aria-hidden="true"></i></span>
+                            <span class="title">配套设施</span>
+                        </label>
+                        <label for="service" class="service">
+                            <span class="icon"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+                            <span class="title">企业服务</span>
+                        </label>
+                        <label for="travel" class="travel">
+                            <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                            <span class="title">云游科学城</span>
+                        </label>
+                        
+                        <div class="slider3"></div>
+    
+                    </div>
+    
+                    <div class="text-content col-10 d-flex mx-end">
+                        <div class="progressxxx text">
+                        <div class="title">建设进展</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi excepturi ducimus sequi dignissimos expedita tempore omnis quos cum, possimus, aspernatur esse nihil commodi est maiores dolorum rem iusto atqu nemo veritatis porro nisi eius sequi dignissimos ea repellendus quibusdam minima ipsum animi quae, libero quisquam a! Laudantium iste est icia!</p>
+                            <p class="text-end">
+                                <a href="./process.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+    
+                        <div class="infrastructure text">
+                        <div class="title">配套设施</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias tempora, unde reprehenderit incidunt excepturi blanditiis ullam dignissimos provident quam? Fugit, enim! Architecto ad officiis dignissimos ex quae iusto amet pariatur, ea eius aut velit, tempora magnam hic autem maiores unde corrupti tenetur delectus!  voluptatem omnis reprehenderit, dignissimos commodi repellat sapiente natus ipsam, ipsa distinctio. Ducimus repudiandae fuga aliquid, numquam.</p>
+                            <p class="text-end">
+                                <a href="./process.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="service text">
+                        <div class="title">企业服务</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores error neque, officia excepturi dolores quis dolor, architecto iusto deleniti a soluta nostrum. Fuga reiciendis beatae, dicta voluptatem, vitae perferendis autem, omnis, impedit, veniam qui dolorem? Ipsam nihil assumenda, sit ratione blanditiis eius aliquam libero iusto, dolorum aut perferendis modi laboriosam sint dolor.</p>
+                            <p class="text-end">
+                                <a href="./process.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                        <div class="travel text">
+                        <div class="title">云游科学城</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore magnam vitae inventore blanditiis nam tenetur voluptates doloribus error atque reprehenderit, necessitatibus minima incidunt a eius corrupti placeleniti, at dolorum tenetur, tempore laborum.</p>
+                            <p class="text-end">
+                                <a href="./process.html" class="btn text-light" style="background-color: #407ba7;">了解更多</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        
+    </section>
+
+    <!-- 外链 -->
+    <section class="pt-4">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+
+                    <div class="dropup-center dropup col mb-2 mb-lg-0">      
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            中央网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            北京市网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            其他科学城网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://www.bjhd.gov.cn/qyfw/index">中关村科学城</a></li>
+                            <li><a class="dropdown-item" href="https://www.kechuangfuwu.com/vue/">未来科学城</a></li>
+
+                            <li><a class="dropdown-item" href="http://www.hfcnsc.cn/home/index">合肥综合性国家科学中心</a></li>
+                            <li><a class="dropdown-item" href="https://www.pudong.gov.cn/zjkxc/">张江科学城</a></li>
+
+                            <li><a class="dropdown-item" href="http://www.szgm.gov.cn/">光明科学城</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            高校院所网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            重大项目网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+            </div>     
+        </div>   
+    </section>
+
+
+    <!--页脚-->
+    <footer class="p-4 text-light" style="background-color: #00043a;">
+        
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-4">
+                <div class="card text-dark border-light col mb-3 mx-auto">
+                    <div class="card-header fw-bold fs-5 text-center">联系我们</div>
+                    <div class="card-body fs-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">电话：11111111111</li>
+                            <li class="list-group-item">邮箱：2222222222@xxx.com</li>
+                            <li class="list-group-item">地址：北京市怀柔区xxxxxxxx</li>
+                          </ul>
+                    </div>
+                </div>
+    
+                <div class="card text-dark border-light col mb-3 mx-auto">
+                    <div class="card-header fw-bold fs-5 text-center">微信公众号</div>
+                    <div class="card-body fs-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="QR code">
+                                    <i class="fa fa-qrcode" aria-hidden="true"></i>
+                                </button>
+                                <span class="ms-2">
+                                    怀柔科学城     
+                                </span>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="QR code">
+                                    <i class="fa fa-qrcode" aria-hidden="true"></i>
+                                </button>
+                                <span class="ms-2">
+                                    怀柔科学城公司      
+                                </span>
+
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+    
+                <div class="card text-dark border-light col mb-3 mx-auto">
+                    <div class="card-header fw-bold fs-5 text-center">其他</div>
+                    <div class="card-body fs-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                          </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="mb-2 mb-lg-0">
+                <p class="lead text-center">Copyright &copy; 2022 怀柔科学城管委会</p>
+            </div>
+                     
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://use.fontawesome.com/897481cde1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>

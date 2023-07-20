@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怀柔科学城官网Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- 引入字体图标 -->
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="process.css">
+
+</head>
+
+<body style="background: linear-gradient(200deg,#f5f7fa,#c3cfe2);">
+
+    <!--导航栏-->
+
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #800016;">
+        <div class="container">
+
+            <!--brand-->
+            <a class="navbar-brand text-light mb-2 mb-lg-0" href="./index.html">
+                <img src="./img/logo_white.svg" alt="logo" width="40" height="25" class="d-inline-block align-text-center mb-1">
+                <span style="font-weight:bold;font-size:25px;">怀柔科学城</span>                   
+            </a>
+
+            <!--折叠按钮-->
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!--搜索框-->
+                <form class="d-flex mx-auto mb-2 mb-lg-0 order-lg-2" role="search">
+                    <input class="form-control" type="search" placeholder="搜索" aria-label="Search" style="height:38px; width: 200px;">
+                    <button class="btn btn-light" type="submit">
+                            <img src="./img/search.svg" alt="search" style="height:18px; width: 18px;" >
+                    </button>              
+                </form>
+
+                <!--要闻动态……-->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 order-lg-1">
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            要闻动态
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./news.html">最新动态</a></li>
+                            <li><a class="dropdown-item" href="#">通知公告</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            政务公开
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">领导信息</a></li>
+                            <li><a class="dropdown-item" href="#">机构职能</a></li>
+                            <li><a class="dropdown-item" href="#">政策文件</a></li>
+                            <li><a class="dropdown-item" href="#">规划文件</a></li>
+                            <li><a class="dropdown-item" href="#">信息公开</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item text-truncate" >
+                        <a class="nav-link  text-light" href="./q&a.html">政民互动</a>
+                    </li>
+                </ul>
+    
+                <!--科学、科学家、科学城-->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 order-lg-3">
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            科学
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./infrastructure.html">设施平台</a></li>
+                            <li><a class="dropdown-item" href="./infrastructure.html">设施预约</a></li>
+                            <li><a class="dropdown-item" href="#">合作交流</a></li>
+                            <li><a class="dropdown-item" href="#">科研成果</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            科学家
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./scientist.html">领军人物</a></li>
+                            <li><a class="dropdown-item" href="#">青年科学家</a></li>
+                            <li><a class="dropdown-item" href="#">科学组织</a></li>
+                            <li><a class="dropdown-item" href="#">人物故事</a></li>
+                            <li><a class="dropdown-item" href="#">人才招聘</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-2 mb-lg-0">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            科学城
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./process.html">建设进展</a></li>
+                            <li><a class="dropdown-item" href="#">配套设施</a></li>
+                            <li><a class="dropdown-item" href="#">企业服务</a></li>
+                            <li><a class="dropdown-item" href="#">云游科学城</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!--登录、语言、无障碍-->
+                <div class="mb-2 mb-lg-0 mx-e order-4 d-flex" role="translate">
+                    <button class="btn btn-sm btn-outline-secondary me-3 bg-light text-dark text-truncate" type="button" onclick="window.location.href = './login.html' ">登录</button>
+
+                    <button class="btn btn-sm btn-outline-secondary me-3 me-lg-1 bg-primary bg-gradient text-light" type="button">繁</button>
+                    <button class="btn btn-sm btn-outline-secondary me-3 me-lg-1 bg-primary bg-gradient text-light" type="button">En</button>
+                    <button class="btn btn-sm btn-outline-secondary me-3 me-lg-1 bg-primary bg-gradient text-light" type="button"><img src="./img/handicapped.svg" alt="..." style="width:15px;height:20px;"></button>                    
+                </div> 
+                                             
+            </div>
+        </div>
+    </nav>
+
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-2">
+          <li class="breadcrumb-item"><a href="./index.html">主页</a></li>
+          <li class="breadcrumb-item"><a href="#">要闻动态</a></li>
+          <li class="breadcrumb-item active" aria-current="page">最新动态</li>
+        </ol>
+    </nav>
+
+
+
+    <section class="p-5">
+        <div class="container">
+            <div class="col">
+                <div class="card mb-3">
+                    <img src="./img/news2.jpg" class="card-img-top" alt="...">
+                </div>
+
+                <div class="mb-3">
+                    <h1 class="fw-bold text-center">郭延红到北京工业大学调研座谈</h1>
+                    <h1 class="fw-bold text-center">北京工业大学与怀柔区人民政府签订战略合作协议<span class="badge bg-warning ms-3">新</span></h1>
+                </div>
+            </div>
+
+            <p>7月29日上午，区委书记、怀柔科学城党工委书记郭延红到北京工业大学调研座谈，北京工业大学与怀柔区人民政府签订战略合作协议。北京工业大学党委书记姜泽廷主持座谈签约会。</p>
+
+            <p>郭延红先后到北京工业大学城市建设学部、材料与制造学部，察看交通工程实验室、资源循环实验室、工业大数据应用技术国家工程实验室、3D打印工程技术研究中心、激光实验室，了解学科建设相关情况。郭延红还察看校史馆，听取学校情况介绍。</p>
+
+            
+
+            <div class="row d-flex justify-content-center p-4">
+                <div class="col">
+                    <img src="./img/pic1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col">
+                    <img src="./img/pic2.jpg" class="img-fluid" alt="">
+
+                </div>
+            </div>
+
+            <p>座谈会上，校地双方围绕北京国际科技创新中心建设，聚焦突破怀柔科学城，在科技创新、成果转化、人才培养等重点领域进行了深入交流。</p>
+
+            <p>
+                姜泽廷表示，怀柔区委、区政府保持战略定力，服务首都“四个中心”功能建设，坚持百年科学城、奋斗每一天，高效统筹疫情防控和经济社会发展，各项工作取得良好成效。北京工业大学作为市属唯一一所“211”重点高校，全面贯彻落实市十三次党代会精神，紧紧围绕新时代首都发展，将进一步深化区校合作，聚焦怀柔科学城建设，围绕科技创新，前沿基础研究、共性技术研发与成果转化和产业化等重点任务开展合作。同时，在城市更新、美丽乡村建设等方面开展全方位、多层次合作，深度融入新时代首都发展。希望双方建立更加紧密的沟通机制和定期会商机制，加强工作统筹，成立工作专班，坚持“小切口”推进，确保双方合作内容尽快落地。
+            </p>
+
+            <p>
+                郭延红向北京工业大学对怀柔科学城建设和怀柔发展的大力支持表示感谢。她指出，当前，怀柔区加快科学城统领“1+3”融合发展，怀柔科学城、国际会都和中国影都加快建设，努力实现“展翅腾飞看怀柔”。怀柔科学城作为国际科技创新中心建设的重要战略支点，不仅有国家实验室，还有综合性国家科学中心，“十三五”时期29个设施年底近半数进入科研状态，同时，科技创新生态加速构建，“聚人气、聚科研气”形成良好态势。校地双方深入开展合作，是落实市第十三次党代会精神的实际行动。战略合作签约，标志着校地合作进入了新阶段，必将为建设世界级原始创新承载区、推动区域高质量发展注入强大动力。希望双方通过全方位、深层次合作，聚焦服务新时代首都发展，在“五子”联动中共同努力，推动校地双方合作早日结出硕果，以优异成绩迎接党的二十大胜利召开。
+            </p>
+
+            <p>
+                彭永臻、李四平、吴斌、刘建萍等北京工业大学领导，孙晓峰、丁明达等怀柔区、怀柔科学城党工委领导参加。
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- 外链 -->
+    <section class="pt-4">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+
+                    <div class="dropup-center dropup col mb-2 mb-lg-0">      
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            中央网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            北京市网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            其他科学城网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://www.bjhd.gov.cn/qyfw/index">中关村科学城</a></li>
+                            <li><a class="dropdown-item" href="https://www.kechuangfuwu.com/vue/">未来科学城</a></li>
+
+                            <li><a class="dropdown-item" href="http://www.hfcnsc.cn/home/index">合肥综合性国家科学中心</a></li>
+                            <li><a class="dropdown-item" href="https://www.pudong.gov.cn/zjkxc/">张江科学城</a></li>
+
+                            <li><a class="dropdown-item" href="http://www.szgm.gov.cn/">光明科学城</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            高校院所网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropup-center dropup col">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            重大项目网站
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                        </ul>
+                    </div>
+            </div>     
+        </div>   
+    </section>
+
+
+    <!--页脚-->
+    <footer class="p-4 text-light" style="background-color: #00043a;">
+        
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-4">
+                <div class="card text-dark border-light col mb-3 mx-auto">
+                    <div class="card-header fw-bold fs-5 text-center">联系我们</div>
+                    <div class="card-body fs-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">电话：11111111111</li>
+                            <li class="list-group-item">邮箱：2222222222@xxx.com</li>
+                            <li class="list-group-item">地址：北京市怀柔区xxxxxxxx</li>
+                          </ul>
+                    </div>
+                </div>
+    
+                <div class="card text-dark border-light col mb-3 mx-auto">
+                    <div class="card-header fw-bold fs-5 text-center">微信公众号</div>
+                    <div class="card-body fs-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="QR code">
+                                    <i class="fa fa-qrcode" aria-hidden="true"></i>
+                                </button>
+                                <span class="ms-2">
+                                    怀柔科学城     
+                                </span>
+                                
+                            </li>
+                            <li class="list-group-item">
+                                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="QR code">
+                                    <i class="fa fa-qrcode" aria-hidden="true"></i>
+                                </button>
+                                <span class="ms-2">
+                                    怀柔科学城公司      
+                                </span>
+
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+    
+                <div class="card text-dark border-light col mb-3 mx-auto">
+                    <div class="card-header fw-bold fs-5 text-center">其他</div>
+                    <div class="card-body fs-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                          </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="mb-2 mb-lg-0">
+                <p class="lead text-center">Copyright &copy; 2022 怀柔科学城管委会</p>
+            </div>
+                     
+        </div>
+    </footer>
+
+
+
+
+    
+    <script src="https://use.fontawesome.com/897481cde1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>
